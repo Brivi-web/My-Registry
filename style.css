@@ -1,0 +1,500 @@
+*,*::before,*::after {
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Chivo Mono', monospace;
+}
+
+:root {
+  --bg: rgba(255, 255, 255, 0.5);
+  --bg2: rgba(147, 112, 219, 0.5);
+  --pad: 5px;
+  --display: flex;
+  --magn: 10px;
+  --bdr: 0.5px solid white;
+  --bdr-r: 10px;
+  --bg-inp: linear-gradient(135deg,rgba(153, 50, 204, 0.4),rgba(0, 0, 0, 0.4));
+  --bxs-in: inset 2px 3px 2px rgba(0, 0, 0, 0.5);
+  --bxs-in2: inset -1px -2px 1px rgba(0,0,0,0.5);
+  --txt-s: 1px 1px 5px fuchsia;
+  --bxs-4c: 5px 5px 4px rgba(0, 0, 0, 0.5);
+  --tx-s: 1px 1px 5px rgba(8, 8, 4, 0.5);
+  --tx-s2: 2px 2px 5px rgba(8,8,4);
+}
+
+body {
+  background: linear-gradient(135deg, darkorchid, black);
+ 
+}
+/*S T A R T  O F  H E A D E R   S E C T I O N */
+  
+header {
+  background: var(--bg2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 5px 5px rgba(8, 8, 4, 0.5);
+  transition: box-shadow 0.38s;
+  z-index: 1;
+}
+
+header:hover {
+  box-shadow: 0 2px 2px rgba(8, 8, 4, 0.8);
+}
+
+/* M E N U  C O N T A I N E R */
+nav {
+  background: darkorchid;
+  box-shadow: var(--bxs-in);
+  padding: 5px 0px 0px 5px;
+  border-radius: 8px;
+  border-bottom: var(--bdr);
+  border-right: var(--bdr);
+  height: 100%;
+  width: 20%;
+  transition: box-shadow 0.38s;
+}
+
+nav:hover {
+  --bxs-in: inset 1px 2px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--bxs-in);
+}
+
+/* M E N U   I C O N */
+nav img {
+  width: 47%;
+  margin-top: 3px;
+}
+
+/*L O G I N  BUTTON  C O N T A I N E R*/
+header span {
+  background: var(--bg-inp);
+  padding: 5px;
+  box-shadow: var(--bxs-in);
+  border-radius: 8px;
+  border-bottom: var(--bdr);
+  border-right: var(--bdr);
+  margin-right: 10px;
+  transition: box-shadow 0.38s;
+}
+
+header span:hover {
+  --bxs-in: inset 1px 2px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--bxs-in);
+  text-shadow: 2px 2px 5px rgba(8, 8, 4);
+}
+
+/*L O G I N  B U T T O N */
+header span a {
+  font-size: 1.3rem;
+  color: #e9e255;
+  text-shadow: var(--tx-s);
+  transition: text-shadow 0.38s;
+  font-weight: 600;
+}
+
+header span:hover a {
+  text-shadow: 2px 2px 5px rgba(8,8,4);
+}
+
+/*E N D  O F  H E A D E R  S E C T I O N*/
+   
+   
+/*S T A R T/C O N T A I N E R  F O R  F O R M*/
+  
+.container {
+  margin-top: 25%;
+  padding: 25px;
+  background: tranparent;
+}
+/*S T A R T  O F  F O R M */
+  
+form {
+  background: transparent;
+  padding: calc(var(--pad) + 5px);
+  display: var(--display);
+  flex-flow: column nowrap ;
+  justify-content: center;
+  border-radius: var(--bdr-r);
+  box-shadow: var(--bxs-in), var(--bxs-in2);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+form::before {
+  --bg-inp: linear-gradient(135deg,rgba(153, 50, 204, 1),rgba(0, 0, 0, 1));
+  content: "Register";
+  font-style: italic;
+  color: Gold;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: var(--bg-inp);
+  diplay: inline-block;
+  position: absolute;
+  top: -5%;
+  padding: var(--pad);
+  font-weight: 500;
+  box-shadow: var(--bxs-in);
+  border-bottom: var(--bdr);
+  border-radius: 8px;
+  text-shadow: var(--txt-s);
+}
+/*F O R M  E L E M E N T S */
+  
+::placeholder {
+  color: lavender;
+  font-weight: 300;
+  text-shadow: var(--tx-s);
+}
+/*   I N P U T    F I E L D S. */
+input[name="firstname"] {
+  margin-top: calc(var(--magn) + 10px);
+}
+
+input[type="text"],input[type="email"],input[type="password"],
+input[type="tel"], select {
+  margin-bottom: var(--magn);
+  border: none;
+  outline: none;
+  padding: var(--pad);
+  background: var(--bg-inp);
+  backgrund: transparent;
+  color: lavender;
+  border-bottom: var(--bdr);
+  border-right: var(--bdr);
+  border-radius: var(--bdr-r);
+  box-shadow: var(--bxs-in);
+  text-shadow: var(--tx-s);
+}
+/*R a d i o  b u t t o n  CONTAINER*/
+  
+form .gendercon {
+  display: var(--display);
+  justify-content: space-around;
+  padding: 3px;
+  margin-bottom: calc(var(--magn) + 0px);
+  background: var(--bg-inp);
+  box-shadow: var(--bxs-in);
+  border-radius: calc(var(--bdr-r) + 5px);
+  border-bottom: var(--bdr);
+  border-right: var(--bdr);
+  color: Grenadier; 
+}
+
+input[type="radio"] {
+  box-shadow: 2px 3px 2px rgba(0,0,0,0.8);
+}
+
+form .first {
+  --bdr: 0.1px solid lavender;
+  --pad: 1px;
+  
+  color: #fba81b;
+  font-weight: 400;
+  background: var(--bg-inp);
+  border-radius: 5px;
+  box-shadow: var(--bxs-in);
+  border-bottom: var(--bdr);
+  padding: var(--pad);
+}
+
+select, input[type="tel"] {
+  border-radius: 7px;
+  font-size: 300;
+}
+
+label {
+  color:#fba81b;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(8, 8, 4);
+}
+
+p {
+  line-spacing: 0;
+  letter-spacing: none;
+  color: lavender;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: calc(var(--magn) + 10px);
+  text-shadow: 2px 2px 5px rgba(8, 8, 4);
+}
+
+p a {
+  text-decoration: underline;
+  color: lavender;
+}
+
+/*S U B M I T  S E C  C O N T A I N E R*/ 
+form .submtsec {
+  display: var(--display);
+  justify-content: space-between;
+  margin-bottom: var(--magn);
+}
+
+form input[type="reset"] {
+  color: #e9e255;
+  border: none;
+  background: var(--bg-inp);
+  border-radius: var(--bdr-r);
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: var(--bxs-in);
+  text-shadow: var(--tx-s);
+  border-bottom: var(--bdr);
+  cursor: pointer;
+  transition: background 0.25s linear, color 0.25s linear,
+              border-top 0.3s linear, border-left 0.3s linear,
+              box-shadow 0.5s linear, text-shadow 0.3s linear;
+}
+
+form input[type="reset"]:hover {
+  background: #630edb;
+  color: magenta;
+  border:none;
+  border-top: var(--bdr);
+  border-left: var(--bdr);
+  box-shadow: 5px 5px 7px black;
+  text-shadow: var(--tx-s2);
+}
+ 
+/*S I G N  I N  B U T T O N*/
+form .button {
+  --bg-inp: linear-gradient(135deg,rgba(153, 50, 204, 0.2),rgba(0, 0, 0, 0.2));
+  
+  color: lime;
+  border: none;
+  width: 37%;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  border-radius: var(--bdr-r);
+  background: var(--bg-inp);
+  padding: var(--pad);
+  position : relative;
+  box-shadow: var(--bxs-in);
+  text-shadow: var(--tx-s);
+  text-shadow: 2px 2px 5px rgba(8, 8, 4);
+  overflow: hidden;
+  background: transparent;
+}
+
+form .button::before {
+  content: "";
+  width: 50%;
+  height: 40%;
+  background: lavender;
+  position : absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -5;
+  animation: rotate 3s linear infinite;
+  transform-origin: 0 0;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+form .button::after {
+  --bg-inp: linear-gradient(135deg,rgba(153, 50, 204, 1),rgba(0, 0, 0, 1));
+  content: "";
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  position: absolute;
+  background: var(--bg-inp);
+  top: 0%;
+  left: 0%;
+  box-shadow: var(--bxs-in);
+  z-index: -1;
+  border-radius: var(--bdr-r);
+  border:none;
+}
+
+/*E N D/CONTAINER O F  F O R M  S E C T I O N*/
+
+/*1ST-B U B B L E     S E C */
+.bubble {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  padding: 0px 10px;
+} 
+
+.bubble .first,.second {
+  width: 12%;
+  animation: diagnol 3s linear infinite; 
+}
+
+.second {
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+@keyframes diagnol {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.1;
+  }
+  25% {
+    transform: scale(0.2);
+    opacity : 0.2;  
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+ 100% {
+   transform: scale(0.9);
+   opacity: 0.2;
+ }
+}
+
+/*2nd-B U B L E   S E C*/
+.bubble2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+} 
+
+.bubble2 img {
+  width: 15%;
+}
+
+.bubble2 .first-d {
+  width: 12%;
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0.25);
+    opacity: 0.3;
+  }
+  25% {
+    transform: scale(0.5);
+    opacity : 0.5;  
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+ 100% {
+   transform: scale(1.5);
+   opacity: 0.8;
+ }
+}
+
+/*F O O T E R  S E C  C O N T A I N E R */
+  
+.foot {
+  display: var(--display);
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--pad);
+  box-shadow: var(--bxs-in);
+  border-radius: var(--bdr-r);
+  margin-top: 5%;
+}
+
+.foot img {
+  width: 40px;
+}
+/* S O C I A L S    S E C T I O N*/
+  
+.socials {
+  display: var(--display);
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+.socials img:nth-child(1) {
+  width: 45px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: var(--bxs-4c);
+  transition: transform .42s, width .42s;
+}
+
+.socials>img:nth-child(1):hover {
+ transform: translateY(-50%);
+ width: 47px;
+}
+
+.socials img:nth-child(2) {
+  width: 35px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: var(--bxs-4c);
+  transition: transform .42s;
+}
+
+.socials>img:hover:nth-child(2) {
+  transform: translateY(-70%);
+}
+
+.socials img:nth-child(3) {
+  width: 25px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: var(--bxs-4c);
+  transition: transform .42s, width .42s;
+}
+
+.socials>img:nth-child(3):hover {
+  transform: translateX(50%);
+  width: 40px;
+}
+/* I N F O  S E C T I O N */
+  
+.info {
+  display: var(--display);
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 30%;
+}
+
+.info img:nth-child(1) {
+  width: 25px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: var(--bxs-4c);
+  transition: transform .42s, width .42s;
+}
+
+.info>img:nth-child(1):hover {
+  transform: translateX(-50%);
+  width: 40px;
+}
+
+.info img:nth-child(2) {
+  width: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: var(--bxs-4c);
+  transition: transform .42s;
+}
+
+.info>img:nth-child(2):hover {
+  transform: translateY(-50%);
+}

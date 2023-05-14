@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: lavender;
+  margin: 0;
+}
+
+header {
+  position : fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(4deg, darkorchid, rgba(147, 112, 219, 0.5));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 15px 0px rgba(8, 4, 4, 0.3);
+}
+
+span i {
+  font-family: 'Chivo Mono', monospace;
+  font-size: large;
+  margin-top: 100px;
+}
+
+.container {
+  margin-top: 80px;
+  background: lavender;
+  padding:0 16px;
+  position: relative;
+  line-height: 2rem;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.serif {
+  font-family: 'Chivo Mono', monospace;
+  color:magenta;
+}
+
+.list-container0 {
+  text-align: justify;
+  padding:0 16px;
+  background: gren;
+}
+
+.list-container1 {
+  text-align: justify;
+  padding:0 16px;
+  background: gren;
+  list-style-type: none;
+}
+
+li i, p i {
+  color: darkorange;
+  margin-right: 8px;
+}
+
+.list-container2 {
+  text-align: justify;
+  padding:0 16px;
+  background: gren;
+  list-style-type: none;
+}
+.alert {
+  padding: 0 16px;
+  background: lightyellow;
+  border-left: 8px groove orange;
+}
+
+.alert b {
+  color: rgb(204, 102, 0);
+}
+
+.foot {
+ background: linear-gradient(4deg, darkorchid, rgba(147, 112, 219, 0.5));
+  padding:10px 16px;
+  text-align: center;
+}
+
+.foot h5 {
+  font-family: 'Chivo Mono', mono-space;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.foot p {
+  color: red;
+  font-size: 1.5rem;
+}
+
+
